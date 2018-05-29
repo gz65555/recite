@@ -8,6 +8,7 @@
   "description": "learn English",
   "scripts": {
     "build": "tsc",
+    "start": "node out/app.js",
     "test": "nyc --reporter=text mocha --recursive"
   },
   "dependencies": {
