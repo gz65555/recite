@@ -1,0 +1,8 @@
+.nyc_output
+.idea
+node_modules/
+test
+coverage
+out
+src/*.js
+src/*.js.map

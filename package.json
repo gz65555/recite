@@ -8,6 +8,9 @@
   "description": "learn English",
   "scripts": {
     "build": "tsc",
+    "start": "node out/app.js",
+    "dev": "rm -rf ./dist && ts-node ./build/start-dev.ts",
+    "ts": "ts-node ./src/app.ts",
     "test": "nyc --reporter=text mocha --recursive"
   },
   "dependencies": {
@@ -27,8 +30,15 @@
     "mongoose": "^5.0.10"
   },
   "devDependencies": {
+    "@types/webpack": "^4.4.0",
+    "@types/webpack-node-externals": "^1.6.3",
     "nyc": "^11.6.0",
-    "typescript": "^2.7.2"
+    "start-server-webpack-plugin": "^2.2.5",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.7.2",
+    "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-node-externals": "^1.7.2"
   },
   "license": "BSD"
 }
