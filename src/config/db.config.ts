@@ -3,6 +3,4 @@
  */
 export default {
   db:'word',
-  user: null,
-  pass: null,
 }
