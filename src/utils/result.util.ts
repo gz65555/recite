@@ -16,7 +16,8 @@ export enum MessageError {
   ADD_WORD_FAIL = 1101,
   ADD_NOTEBOOK_FAIL = 1102,
   NOTEBOOK_EXIST = 1103,
-  FINDALL_NOTEBOOK_FAIL = 1104
+  FINDALL_NOTEBOOK_FAIL = 1104,
+  WORD_NOT_FOUND = 1105
 }
 
 export const ResultUtil = {

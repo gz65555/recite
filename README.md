@@ -2,12 +2,12 @@
 
 ## 安装和启动
 
-```
+```shell
+#安装依赖
 npm install
-npm 
+#运行
+npm run ts
 ```
-
-
 
 ## 技术栈
 
@@ -36,3 +36,31 @@ npm
   - 修改绑定邮箱
 - 设置
   - 修改单词间的间隔时间
+
+## API 文档
+
+### 单词
+
+####查询单词
+
+##### Request
+- Method: **GET**
+- URL:  ```/api/word:{word}```
+- Headers：
+- Body:
+#### Response
+- Body
+```
+{
+  "code": 200,
+  "data": "730781",
+  "message": "OK"
+}
+```
+
+
+
+
+
+
+

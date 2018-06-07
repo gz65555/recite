@@ -57,7 +57,12 @@ export async function addWordToNotebook(word: string, notebookId: Types.ObjectId
 }
 
 export async function findWord(word: string) {
-  return ResultUtil.success(await findWordFromShanBay(word))
+  const res = await findWordFromShanBay(word)
+  if(res) {
+    return ResultUtil.success(res)
+  } else {
+    return ResultUtil.error(MessageError.WORD_NOT_FOUND)
+  }
 }
 
 /**
@@ -67,14 +72,18 @@ export async function findWord(word: string) {
  */
 async function findWordFromShanBay(word: string) {
   const res = await axios.get('https://api.shanbay.com/bdc/search/', {params: {word}})
-  const result = res.data.data
-  const exampleRes = await axios.get('https://api.shanbay.com/bdc/example/', {
-    params: {
-      type: 'sys',
-      vocabulary_id: result.id
-    }
-  })
-  return copyRequestResultToWord(result, exampleRes.data.data);
+  if (res.data.status_code === 0) {
+    const result = res.data.data
+    const exampleRes = await axios.get('https://api.shanbay.com/bdc/example/', {
+      params: {
+        type: 'sys',
+        vocabulary_id: result.id
+      }
+    })
+    console.log(result)
+    return copyRequestResultToWord(result, exampleRes.data.data);
+  }
+  return null;
 }
 
 

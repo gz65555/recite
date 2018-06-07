@@ -16,5 +16,5 @@ app.use(verifyTokenMiddleware())
 app.use(router.routes()).use(router.allowedMethods())
 
 app.listen(3000,()=>{
-  console.log('server start')
+  console.log('server start at http://localhost:3000')
 })
