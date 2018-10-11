@@ -1,11 +1,37 @@
 {
   "pages": [
+    "pages/searchbar/main",
     "pages/index/main",
-    "pages/logs/main"  ],
+    "pages/logs/main"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#e36356",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/main",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/home.png",
+        "text": "一刻"
+      },
+      {
+        "pagePath": "pages/searchbar/main",
+        "iconPath": "static/icon/notebook.png",
+        "selectedIconPath": "static/icon/notebook.png",
+        "text": "话题"
+      },
+      {
+        "pagePath": "pages/logs/main",
+        "iconPath": "static/icon/mine.png",
+        "selectedIconPath": "static/icon/mine.png",
+        "text": "我的"
+      }
+    ]
   }
 }
