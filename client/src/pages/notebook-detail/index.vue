@@ -13,6 +13,10 @@
       <div class="words">
         <word/>
         <word/>
+        <word/>
+        <word/>
+        <word/>
+        <word/>
       </div>
       <div class="footer">
         <div class="hr"></div>
@@ -23,6 +27,9 @@
         </div>
         <div class="hr"></div>
       </div>
+    </div>
+    <div class="bottom-fixed">
+      <img src="../../../static/icon/play.png">
     </div>
   </div>
 </template>
@@ -89,5 +96,22 @@
     width: 120px;
     background-color: #ddd;
     height: 1px;
+  }
+
+  .bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 3px #eee;
+  }
+
+  .bottom-fixed img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
   }
 </style>
