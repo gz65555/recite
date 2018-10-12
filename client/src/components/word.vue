@@ -19,6 +19,9 @@
 
 <style scoped>
   .word {
+    border-top: 0.5px solid #eee;
+  }
+  .word {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -17,6 +17,8 @@
         <word/>
         <word/>
         <word/>
+        <word/>
+        <word/>
       </div>
       <div class="footer">
         <div class="hr"></div>
@@ -45,12 +47,11 @@
 </script>
 
 <style scoped>
-  .word {
-    border-top: 0.5px solid #eee;
-  }
-
   .top {
+    top: 0;
+    position: fixed;
     height: 60px;
+    width: 100%;
     background-color: white;
     box-shadow: 1px 1px 2px #eee;
   }
@@ -80,12 +81,17 @@
     margin-right: 20px;
   }
 
+  .words {
+    margin-top: 60px;
+  }
+
   .footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     color: #ddd;
+    margin-bottom: 60px;
   }
 
   .middle {
