@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/notebook/main",
+    "pages/notebook-detail/main",
     "pages/searchbar/main",
     "pages/index/main",
     "pages/logs/main"
@@ -13,18 +15,19 @@
   "tabBar": {
     "selectedColor": "#e36356",
     "borderStyle": "white",
+    "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/index/main",
+        "pagePath": "pages/searchbar/main",
         "iconPath": "static/icon/home.png",
         "selectedIconPath": "static/icon/home.png",
-        "text": "一刻"
+        "text": "首页"
       },
       {
-        "pagePath": "pages/searchbar/main",
+        "pagePath": "pages/notebook/main",
         "iconPath": "static/icon/notebook.png",
         "selectedIconPath": "static/icon/notebook.png",
-        "text": "话题"
+        "text": "单词本"
       },
       {
         "pagePath": "pages/logs/main",
