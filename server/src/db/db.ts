@@ -8,7 +8,7 @@ import {findUserByUnionId} from "./dao/user.dao";
 
 
 export async function connect() {
-  await mongoose.connect('mongodb://localhost/word', config);
+  await mongoose.connect('mongodb://localhost/word', {useNewUrlParser: true});
   // const res = await dao.user.findUserByUnionId('husongggg')
   // console.log(res)
 }

@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/word-detail/main",
+    "pages/home/main",
     "pages/notebook/main",
     "pages/notebook-detail/main",
     "pages/searchbar/main",
@@ -18,7 +20,7 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/searchbar/main",
+        "pagePath": "pages/home/main",
         "iconPath": "static/icon/home.png",
         "selectedIconPath": "static/icon/home.png",
         "text": "首页"

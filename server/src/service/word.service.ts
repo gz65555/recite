@@ -51,14 +51,13 @@ export async function addWordToNotebook(word: string, notebookId: Types.ObjectId
       return ResultUtil.error(MessageError.NO_PERMISSION)
     }
   } catch (e) {
-    console.log(e);
     return ResultUtil.error(MessageError.ADD_WORD_FAIL)
   }
 }
 
 export async function findWord(word: string) {
   const res = await findWordFromShanBay(word)
-  if(res) {
+  if (res) {
     return ResultUtil.success(res)
   } else {
     return ResultUtil.error(MessageError.WORD_NOT_FOUND)
@@ -80,8 +79,9 @@ async function findWordFromShanBay(word: string) {
         vocabulary_id: result.id
       }
     })
-    console.log(result)
-    return copyRequestResultToWord(result, exampleRes.data.data);
+    const word = copyRequestResultToWord(result, exampleRes.data.data);
+    console.log(word)
+    return word;
   }
   return null;
 }
@@ -90,17 +90,18 @@ async function findWordFromShanBay(word: string) {
 function copyRequestResultToWord(result: any, exampleResult: any) {
   const enDefinitions = parseEnDefinition(result.en_definitions);
   const cnDefinition = parseCnDefinition(result.cn_definition);
+  const pronunciations = parsePronunciations(result.pronunciations);
   const example = parseExample(exampleResult);
-  return new Word({
+  return {
+    pronunciations,
+    example,
     shanbay_id: result.id,
     en_definitions: enDefinitions,
     cn_definitions: cnDefinition,
     content: result.content,
     uk_audio: result.uk_audio,
     us_audio: result.us_audio,
-    pron: result.pron,
-    example: example
-  })
+  }
 }
 
 function parseCnDefinition(cnDefinition) {
@@ -114,6 +115,14 @@ function parseEnDefinition(enDefinitions) {
   const map = []
   for (let k in enDefinitions) {
     map.push({type: k, explain: enDefinitions[k].join(';')})
+  }
+  return map
+}
+
+function parsePronunciations(pronunciations) {
+  const map = []
+  for (let k in pronunciations) {
+    map.push({type: k, pron: pronunciations[k]})
   }
   return map
 }
