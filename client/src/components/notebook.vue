@@ -17,7 +17,7 @@
 
 <style scoped>
   .notebook {
-    width: 175px;
+    width: 160px;
     height: 200px;
     border-radius: 10px;
     box-shadow: 1px 1px 8px #eee;

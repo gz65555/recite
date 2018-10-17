@@ -4,6 +4,10 @@
 import {Context} from "koa";
 import {service} from "../service";
 
-export async function login(ctx:Context, next) {
-  ctx.body = await service.user.login(ctx.request.body.unionId)
+export async function login(ctx: Context | any, next) {
+  switch (ctx.params.type) {
+    case 'wx':
+      ctx.body = await service.user.login(ctx.request.body.unionId)
+      break;
+  }
 }

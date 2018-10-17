@@ -20,7 +20,7 @@ protectRouter.post('/word', needUserMiddleware(), word.addWordToNotebook)
 protectRouter.delete('/word', needUserMiddleware(), word.deleteWordFromNotebook)
 
 //无需是认证用户即可的操作
-unprotectRouter.post('/login', user.login)
+unprotectRouter.post('/login/:type', user.login)
 unprotectRouter.get('/word', word.getAllWordsFromNotebook)
 unprotectRouter.get('/word/:word', word.findWord)
 

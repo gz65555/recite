@@ -1,8 +1,11 @@
 {
   "pages": [
-    "pages/word-detail/main",
+    "pages/auth/main",
     "pages/home/main",
+    "pages/mine/main",
+    "pages/word-detail/main",
     "pages/notebook/main",
+    "pages/add-to-notebook/main",
     "pages/notebook-detail/main",
     "pages/searchbar/main",
     "pages/index/main",
@@ -32,7 +35,7 @@
         "text": "单词本"
       },
       {
-        "pagePath": "pages/logs/main",
+        "pagePath": "pages/mine/main",
         "iconPath": "static/icon/mine.png",
         "selectedIconPath": "static/icon/mine.png",
         "text": "我的"

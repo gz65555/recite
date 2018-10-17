@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-      <img src="../../../static/icon/add-list.png" class="collection">
+      <img src="../../../static/icon/add-list.png" class="collection" @click="toAddToNotebook">
     </div>
     <div class="explain">
       <div class="label">
@@ -98,6 +98,11 @@
             "us_audio": "http://media.shanbay.com/audio/us/get.mp3"
           }
         }
+      }
+    },
+    methods: {
+      toAddToNotebook() {
+        this.$router.push({ path: '/pages/add-to-notebook/main' });
       }
     }
   }

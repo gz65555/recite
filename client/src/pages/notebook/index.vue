@@ -10,6 +10,7 @@
         <notebook/>
       </div>
     </div>
+    <button class="weui-btn circle" type="primary" plain="true">+</button>
   </div>
 </template>
 
@@ -54,5 +55,15 @@
     display: flex;
     text-align: center;
     justify-content: space-between;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    border-radius: 20px;
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
   }
 </style>
